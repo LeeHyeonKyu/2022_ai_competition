@@ -1,8 +1,8 @@
 DIRECTORY:
-  dataset: path_to_test.json_and_sample_submission
+  dataset: ../dataset
 
 TRAIN:
-  train_serial: 'YYYYMMDD_SERIAL'
+  train_serial: '20220611_113823'
 
 PREDICT:
   seed: 42
