@@ -186,7 +186,9 @@ class QADataset(Dataset):
 
                 while offsets[token_end_index][1] >= end_char:
                     token_end_index -= 1
-                end_positions.append(token_end_index + 2)
+                while offsets[token_end_index][0] < end_char:
+                    token_end_index += 1
+                end_positions.append(token_end_index)
 
         encodings.update({'start_positions': start_positions, 'end_positions': end_positions})
 
